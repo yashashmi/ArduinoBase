@@ -7,17 +7,10 @@ trigger:
 - master
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: ubuntu-latest
 
-stages:
-- stage: Prequisites
-  jobs:
-  - job: Install_Apt_Update
-    steps:
-    - script: sudo apt-get update
-  - job: Install_Python36
-    steps:
-    - script: sudo apt-get install python36
-  - job: Install_PlatformIo
-    steps:
-    - script: sudo pip3 install -U platformio
+steps:
+- script: sudo apt-get update
+    sudo apt-get install python36
+    sudo pip3 install -U platformio
+  displayName: "Install platformio"
