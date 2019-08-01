@@ -10,7 +10,7 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: sudo apt-get update
-    sudo apt-get install python36
-    sudo pip3 install -U platformio
+- bash: sudo apt-get update
+- bash: sudo apt-get install python36
+- bash: sudo pip3 install -U platformio
   displayName: "Install platformio"
