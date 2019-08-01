@@ -11,6 +11,8 @@ pool:
 
 steps:
 - bash: sudo apt-get update
-- bash: sudo apt-get install python36
+  displayName: "Install Apt Updates"
+- bash: sudo apt-get install python3.6
+  displayName: "Install Python 3.6"
 - bash: sudo pip3 install -U platformio
   displayName: "Install platformio"
