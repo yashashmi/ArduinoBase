@@ -9,11 +9,16 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
-steps:
-- script: sudo apt-get update
-  displayName: 'update apt'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+stages:
+- stage: Prequisites
+  jobs:
+  - job: Install_Apt_Update
+    steps:
+    - script: sudo apt-get update
+  - job: Install_Python36
+    steps:
+    - script: sudo apt-get install python36
+  - job: Install_PlatformIo
+    steps:
+    - script: sudo pip3 install -U platformio
