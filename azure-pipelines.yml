@@ -12,7 +12,5 @@ pool:
 steps:
 - bash: sudo apt-get update
   displayName: "Install Apt Updates"
-- bash: sudo apt-get install python3
-  displayName: "Install Python"
-- bash: sudo pip3 install -U platformio
+- bash: pip3 install -U platformio
   displayName: "Install platformio"
