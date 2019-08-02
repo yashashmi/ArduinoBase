@@ -12,7 +12,6 @@ pool:
 steps:
 - bash: sudo apt-get update
   displayName: "Install Apt Updates"
-- bash: python -c "$(curl -fsSL https://raw.githubusercontent.com/platformio/platformio/develop/scripts/get-platformio.py)"
-  displayName: "Install platformio"
-- bash: platformio run -e uno
-  displayName: "Build"
+- bash: |
+   python -c "$(curl -fsSL https://raw.githubusercontent.com/platformio/platformio/develop/scripts/get-platformio.py)"
+   platformio run -e uno
