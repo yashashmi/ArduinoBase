@@ -10,6 +10,7 @@ void test_mod1() {
 
     mod1_set_a(&o, 17);
     TEST_ASSERT_EQUAL(mod1_get_a(&o), 17);
+    //Some change to turn dirty flag
 
     mod1_process(&o);
     TEST_ASSERT_EQUAL(mod1_get_a(&o), 18);
