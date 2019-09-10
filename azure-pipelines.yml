@@ -16,4 +16,4 @@ steps:
   - script: python -c "$(curl -fsSL https://raw.githubusercontent.com/platformio/platformio/develop/scripts/get-platformio.py)"
     displayName: "Install platformio"
 
-  - bash: platformio run -e uno
+  - bash: pio run -e uno
